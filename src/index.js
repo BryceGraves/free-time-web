@@ -25,9 +25,9 @@ class App extends React.Component {
   renderContent() {
     var content = <LandingPage changePage={this.handlePageChange} />;
 
-    if (this.state.currentPage === 1) {
+    if (this.state.currentPage % 3 === 1) {
       content = <Storefront changePage={this.handlePageChange} />;
-    } else if (this.state.currentPage === 2) {
+    } else if (this.state.currentPage % 3 === 2) {
       content = <Checkout changePage={this.handlePageChange} />;
     }
 
