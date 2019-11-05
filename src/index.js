@@ -1,46 +1,63 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import ReactDOM from "react-dom";
+import {
+  Route,
+  HashRouter
+} from "react-router-dom";
+
+import Billing from "./containers/billing";
 import Checkout from "./containers/checkout";
 import LandingPage from "./containers/landingPage";
+import Payment from "./containers/payment";
 import Storefront from "./containers/storefront";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {currentPage: 0};
+import 'semantic-ui-css/semantic.min.css'
 
-    this.handlePageChange = this.handlePageChange.bind(this);
-  }
-
-  componentDidUpdate() {
-    console.log("APPLICATION RE-RENDERED");
-  }
-
-  handlePageChange() {
-    this.setState(state => ({
-      currentPage: state.currentPage + 1,
-    }));
-  }
-
-  renderContent() {
-    var content = <LandingPage changePage={this.handlePageChange} />;
-
-    if (this.state.currentPage % 3 === 1) {
-      content = <Storefront changePage={this.handlePageChange} />;
-    } else if (this.state.currentPage % 3 === 2) {
-      content = <Checkout changePage={this.handlePageChange} />;
+function App() {
+  const [formInfo, setFormInfo] = useState({
+    formInfo: {
+      firstName: "",
+      lastName: "",
+      schoolName: "",
+      districtName: "",
+      creditCardNumber: "",
+      securityCode: "",
+      billingAddress: "",
+      zipCode: "",
+      city: "",
+      stateCode: ""
     }
+  });
 
-    return content;
-  }
+  const handleFormUpdate = useCallback((updatedValues) => {
+      setFormInfo(updatedValues);
+    }, []
+  );
 
-  render() {
-    return (
-      <div className="mainContainer">
-        {this.renderContent()}
-      </div>
-    );
-  }
+  return (
+    <HashRouter>
+      <Route path="/store" exact>
+        <Storefront />
+      </Route>
+      <Route path="/billing" exact>
+        <Billing
+          formUpdate={handleFormUpdate}
+          info={formInfo} />
+      </Route>
+      <Route path="/payment" exact>
+        <Payment />
+      </Route>
+      <Route path="/confirmation" exact>
+        <Checkout info={formInfo} />
+      </Route>
+      <Route path="/" exact>
+        <LandingPage />
+      </Route>
+    </HashRouter>
+  );
 }
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(
+  <App />,
+  document.querySelector("#root")
+);
