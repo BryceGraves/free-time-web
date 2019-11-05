@@ -31,6 +31,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^6.6.0",
     "gh-pages": "^2.1.1"
   },
   "homepage": "http://brycegraves.github.io/free-time"
