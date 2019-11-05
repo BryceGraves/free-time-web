@@ -12,7 +12,7 @@ class Storefront extends React.Component {
       <div className="mainContainer">
         <h1 className="titleText">Storefront!</h1>
         <h2 style={{textAlign: "center"}}>Buy the things!</h2>
-        <button onClick={this.props.changePage}>Store Front</button>
+        <button onClick={this.props.changePage}>Proceed to Checkout</button>
       </div>
     );
   }
