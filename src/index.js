@@ -52,7 +52,7 @@ function App() {
           globalState={globalState} />
       </Route>
       <Route path="/payment" exact>
-        <Payment />
+        <Payment globalState={globalState} />
       </Route>
       <Route path="/confirmation" exact>
         <Checkout globalState={globalState} />
