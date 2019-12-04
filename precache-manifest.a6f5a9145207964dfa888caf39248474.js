@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1a63a0352c15a0f21e6070c6ff578b5b",
+    "revision": "f026f784280cdf398c84423f0bb5eb97",
     "url": "/free-time-web/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/free-time-web/static/js/2.7267460a.chunk.js"
   },
   {
-    "revision": "7e66a5384b4d5c8172cd",
-    "url": "/free-time-web/static/js/main.1cdeccf2.chunk.js"
+    "revision": "0eacde55f7a9a5c9806b",
+    "url": "/free-time-web/static/js/main.e796b0b6.chunk.js"
   },
   {
     "revision": "57094f56f78842926876",
