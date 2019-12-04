@@ -20,7 +20,7 @@ class CheckoutForm extends Component {
       return
     }
 
-    let response = await fetch("/charge", {
+    let response = await fetch("https://free-time-services.herokuapp.com/charge", {
       method: "POST",
       headers: { "Content-Type": "text/plain" },
       body: token.id
