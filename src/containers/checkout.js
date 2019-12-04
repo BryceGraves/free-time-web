@@ -40,19 +40,17 @@ const steps = [
 
 const ConfirmationSteps = () => <Step.Group items={steps} />
 
-function Confirmation({ info }) {
+function Confirmation({ globalState }) {
   const {
     firstName,
     lastName,
     schoolName,
     districtName,
-    creditCardNumber,
-    securityCode,
     billingAddress,
     zipCode,
     city,
     stateCode
-  } = info;
+  } = globalState.formInfo;
 
   return (
     <Segment placeholder>

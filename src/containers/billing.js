@@ -39,13 +39,13 @@ const steps = [
 
 const BillingSteps = () => <Step.Group items={steps} />
 
-function Billing({ formUpdate, info }) {
+function Billing({ updateGlobalState, globalState }) {
   const handleChange = useCallback((e, { name, value }) => {
-    info[name] = value
+    globalState.formInfo[name] = value
   });
 
   const handleSubmit = useCallback(() => {
-    formUpdate(info);
+    updateGlobalState(globalState);
   });
 
   const {
@@ -53,13 +53,11 @@ function Billing({ formUpdate, info }) {
     lastName,
     schoolName,
     districtName,
-    creditCardNumber,
-    securityCode,
     billingAddress,
     zipCode,
     city,
     stateCode
-  } = info;
+  } = globalState.formInfo;
 
   return (
     <Segment placeholder>

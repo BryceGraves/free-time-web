@@ -14,7 +14,7 @@ import Storefront from "./containers/storefront";
 import 'semantic-ui-css/semantic.min.css'
 
 function App() {
-  const [formInfo, setFormInfo] = useState({
+  const [globalState, setGlobalState] = useState({
     formInfo: {
       firstName: "",
       lastName: "",
@@ -26,11 +26,18 @@ function App() {
       zipCode: "",
       city: "",
       stateCode: ""
+    },
+    paymentPlan: {
+      amount: 100000,
+      description: "",
+      source: ""
     }
   });
 
-  const handleFormUpdate = useCallback((updatedValues) => {
-      setFormInfo(updatedValues);
+  const handleGlobalStateUpdate = useCallback((updatedValues) => {
+      setGlobalState((prevValues) => {
+        return { ...prevValues, ...updatedValues }
+      });
     }, []
   );
 
@@ -41,14 +48,14 @@ function App() {
       </Route>
       <Route path="/billing" exact>
         <Billing
-          formUpdate={handleFormUpdate}
-          info={formInfo} />
+          updateGlobalState={handleGlobalStateUpdate}
+          globalState={globalState} />
       </Route>
       <Route path="/payment" exact>
         <Payment />
       </Route>
       <Route path="/confirmation" exact>
-        <Checkout info={formInfo} />
+        <Checkout globalState={globalState} />
       </Route>
       <Route path="/" exact>
         <LandingPage />
