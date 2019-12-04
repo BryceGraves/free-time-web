@@ -40,11 +40,6 @@ const steps = [
 const PaymentSteps = () => <Step.Group items={steps} />
 
 function Payment(globalState) {
-  const {
-    amount,
-    description
-  } = globalState.paymentPlan;
-
   return (
     <Segment placeholder>
       <PaymentSteps />
@@ -52,7 +47,7 @@ function Payment(globalState) {
         <div className="example">
           <h1>Input Your Payment Information Below</h1>
           <Elements>
-            <CheckoutForm amount={amount} description={description} />
+            <CheckoutForm amount={globalState.paymentPlan.amount} description={globalState.paymentPlan.description} />
           </Elements>
         </div>
       </StripeProvider>
