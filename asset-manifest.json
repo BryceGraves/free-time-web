@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/free-time-web/static/js/main.866a68eb.chunk.js",
-    "main.js.map": "/free-time-web/static/js/main.866a68eb.chunk.js.map",
+    "main.js": "/free-time-web/static/js/main.35ad2e35.chunk.js",
+    "main.js.map": "/free-time-web/static/js/main.35ad2e35.chunk.js.map",
     "runtime-main.js": "/free-time-web/static/js/runtime-main.95509962.js",
     "runtime-main.js.map": "/free-time-web/static/js/runtime-main.95509962.js.map",
     "static/css/2.844005b8.chunk.css": "/free-time-web/static/css/2.844005b8.chunk.css",
     "static/js/2.7267460a.chunk.js": "/free-time-web/static/js/2.7267460a.chunk.js",
     "static/js/2.7267460a.chunk.js.map": "/free-time-web/static/js/2.7267460a.chunk.js.map",
     "index.html": "/free-time-web/index.html",
-    "precache-manifest.78dc88f796a61c67b54982face76525e.js": "/free-time-web/precache-manifest.78dc88f796a61c67b54982face76525e.js",
+    "precache-manifest.602f8e79df318f3cf6412df3c9531fa6.js": "/free-time-web/precache-manifest.602f8e79df318f3cf6412df3c9531fa6.js",
     "service-worker.js": "/free-time-web/service-worker.js",
     "static/css/2.844005b8.chunk.css.map": "/free-time-web/static/css/2.844005b8.chunk.css.map",
     "static/media/semantic.min.css": "/free-time-web/static/media/outline-icons.ef60a4f6.woff",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.95509962.js",
     "static/css/2.844005b8.chunk.css",
     "static/js/2.7267460a.chunk.js",
-    "static/js/main.866a68eb.chunk.js"
+    "static/js/main.35ad2e35.chunk.js"
   ]
 }
