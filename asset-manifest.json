@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.js": "/free-time-web/static/js/main.f9e74fa6.chunk.js",
+    "main.js.map": "/free-time-web/static/js/main.f9e74fa6.chunk.js.map",
+    "runtime-main.js": "/free-time-web/static/js/runtime-main.95509962.js",
+    "runtime-main.js.map": "/free-time-web/static/js/runtime-main.95509962.js.map",
+    "static/css/2.844005b8.chunk.css": "/free-time-web/static/css/2.844005b8.chunk.css",
+    "static/js/2.17dea96f.chunk.js": "/free-time-web/static/js/2.17dea96f.chunk.js",
+    "static/js/2.17dea96f.chunk.js.map": "/free-time-web/static/js/2.17dea96f.chunk.js.map",
+    "index.html": "/free-time-web/index.html",
+    "precache-manifest.545df9d74b8482c4a714ae79b99f38cd.js": "/free-time-web/precache-manifest.545df9d74b8482c4a714ae79b99f38cd.js",
+    "service-worker.js": "/free-time-web/service-worker.js",
+    "static/css/2.844005b8.chunk.css.map": "/free-time-web/static/css/2.844005b8.chunk.css.map",
+    "static/media/semantic.min.css": "/free-time-web/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/working-students.jpg": "/free-time-web/static/media/working-students.31373f62.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.95509962.js",
+    "static/css/2.844005b8.chunk.css",
+    "static/js/2.17dea96f.chunk.js",
+    "static/js/main.f9e74fa6.chunk.js"
+  ]
+}
