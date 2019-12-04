@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,6 @@ import {
   Card,
   Segment,
   Step,
-  Header,
 } from 'semantic-ui-react'
 
 const steps = [
