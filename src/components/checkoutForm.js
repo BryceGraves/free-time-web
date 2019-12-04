@@ -20,16 +20,16 @@ class CheckoutForm extends Component {
       return
     }
 
-    let data = {
+    let body = {
       amount: 100000,
+      source: token.id
     };
 
     let response = await fetch("https://free-time-services.herokuapp.com/charge", {
       mode: "cors",
       method: "POST",
       headers: { "Content-Type": "text/plain" },
-      body: token.id,
-      data: data
+      body: body
     });
 
     if (response.ok) console.log("Purchase Complete!")
