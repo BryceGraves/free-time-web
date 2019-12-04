@@ -22,7 +22,7 @@ class CheckoutForm extends Component {
 
     let body = {
       amount: 100000,
-      source: token.id,
+      source: token.id
     };
 
     let response = await fetch("https://free-time-services.herokuapp.com/charge", {
