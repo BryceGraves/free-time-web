@@ -68,7 +68,7 @@ function Storefront(updateGlobalState, globalState) {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green' onClick={handleSubmit(5000)}>Price: $50</Button>
+                <Button basic color='green' onClick={handleSubmit, 5000}>Price: $50</Button>
               </Link>
             </Card.Content>
           </Card>
@@ -82,7 +82,7 @@ function Storefront(updateGlobalState, globalState) {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green' onClick={handleSubmit(100000)}>Price: $1000</Button>
+                <Button basic color='green' onClick={handleSubmit, 100000}>Price: $1000</Button>
               </Link>
             </Card.Content>
           </Card>
@@ -96,7 +96,7 @@ function Storefront(updateGlobalState, globalState) {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green' onClick={handleSubmit(800000)}>Price: $8000</Button>
+                <Button basic color='green' onClick={handleSubmit, 800000}>Price: $8000</Button>
               </Link>
             </Card.Content>
           </Card>
