@@ -42,7 +42,7 @@ const BillingSteps = () => <Step.Group items={steps} />
 function Billing({ updateGlobalState, globalState }) {
   const handleChange = useCallback((e, { name, value }) => {
     globalState.formInfo[name] = value
-  }, [globalState]);
+  }, [globalState.formInfo[name]]);
 
   const handleSubmit = useCallback(() => {
     updateGlobalState(globalState);
