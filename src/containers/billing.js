@@ -42,23 +42,23 @@ const BillingSteps = () => <Step.Group items={steps} />
 function Billing({ updateGlobalState, globalState }) {
   const handleChange = useCallback((e, { name, value }) => {
     globalState.formInfo[name] = value
-    this.formDetails[name] = value
+    updateGlobalState(globalState);
   }, []);
 
   const handleSubmit = useCallback(() => {
     updateGlobalState(globalState);
   }, []);
 
-  const formDetails = {
-    firstName: globalState.formInfo.firstName,
-    lastName: globalState.formInfo.lastName,
-    schoolName: globalState.formInfo.schoolName,
-    districtName: globalState.formInfo.districtName,
-    billingAddress: globalState.formInfo.billingAddress,
-    zipCode: globalState.formInfo.zipCode,
-    city: globalState.formInfo.city,
-    stateCode: globalState.formInfo.stateCode
-  };
+  const {
+    firstName,
+    lastName,
+    schoolName,
+    districtName,
+    billingAddress,
+    zipCode,
+    city,
+    stateCode
+  } = globalState.formInfo;
 
   return (
     <Segment placeholder>
@@ -71,28 +71,28 @@ function Billing({ updateGlobalState, globalState }) {
                 <Form.Input
                   fluid
                   name='firstName'
-                  value={formDetails.firstName}
+                  value={firstName}
                   label='First name'
                   placeholder='First name'
                   onChange={handleChange} />
                 <Form.Input
                   fluid
                   name='lastName'
-                  value={formDetails.lastName}
+                  value={lastName}
                   label='Last name'
                   placeholder='Last name'
                   onChange={handleChange} />
                 <Form.Input
                   fluid
                   name='schoolName'
-                  value={formDetails.schoolName}
+                  value={schoolName}
                   label='School Name'
                   placeholder='School Name'
                   onChange={handleChange} />
                 <Form.Input
                   fluid
                   name='districtName'
-                  value={formDetails.districtName}
+                  value={districtName}
                   label='District Name'
                   placeholder='District Name'
                   onChange={handleChange} />
@@ -101,28 +101,28 @@ function Billing({ updateGlobalState, globalState }) {
                 <Form.Input
                   fluid
                   name='billingAddress'
-                  value={formDetails.billingAddress}
+                  value={billingAddress}
                   label='Billing Address'
                   placeholder='Billing Address'
                   onChange={handleChange} />
                 <Form.Input
                   fluid
                   name='zipCode'
-                  value={formDetails.zipCode}
+                  value={zipCode}
                   label='Zip Code'
                   placeholder='Zip Code'
                   onChange={handleChange} />
                 <Form.Input
                   fluid
                   name='city'
-                  value={formDetails.city}
+                  value={city}
                   label='City'
                   placeholder='City'
                   onChange={handleChange} />
                 <Form.Input
                   fluid
                   name='stateCode'
-                  value={formDetails.stateCode}
+                  value={stateCode}
                   label='State'
                   placeholder='State'
                   onChange={handleChange} />
