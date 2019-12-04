@@ -146,5 +146,6 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+  "homepage": "https://brycegraves.github.io/free-time-web"
 }
