@@ -29,8 +29,7 @@ function App() {
     },
     paymentPlan: {
       amount: 100000,
-      description: "",
-      source: ""
+      description: ""
     }
   });
 
@@ -38,13 +37,14 @@ function App() {
       setGlobalState((prevValues) => {
         return { ...prevValues, ...updatedValues }
       });
-    }, []
-  );
+  }, []);
 
   return (
     <HashRouter>
       <Route path="/store" exact>
-        <Storefront />
+        <Storefront
+          updateGlobalState={handleGlobalStateUpdate}
+          globalState={globalState} />
       </Route>
       <Route path="/billing" exact>
         <Billing

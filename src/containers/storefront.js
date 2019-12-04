@@ -39,7 +39,21 @@ const steps = [
 
 const CheckoutSteps = () => <Step.Group items={steps} />
 
-function Storefront() {
+function Storefront(updateGlobalState, globalState) {
+  const handleSubmit = useCallback((cost) => {
+    globalState.paymentPlan[amount] = cost
+
+    if (cost === 5000) {
+      globalState.paymentPlan[description] = "Trial Subscription"
+    } else if (cost === 100000) {
+      globalState.paymentPlan[description] = "Year Subscription"
+    } else if (cost === 800000) {
+      globalState.paymentPlan[description] = "Ten Year Subscription"
+    }
+
+    updateGlobalState(globalState);
+  }, []);
+
   return (
     <>
       <Segment placeholder>
@@ -55,7 +69,7 @@ function Storefront() {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green'>Price: $50</Button>
+                <Button basic color='green' onClick={handleSubmit(5000)}>Price: $50</Button>
               </Link>
             </Card.Content>
           </Card>
@@ -69,7 +83,7 @@ function Storefront() {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green'>Price: $1000</Button>
+                <Button basic color='green' onClick={handleSubmit(100000)}>Price: $1000</Button>
               </Link>
             </Card.Content>
           </Card>
@@ -83,7 +97,7 @@ function Storefront() {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green'>Price: $8000</Button>
+                <Button basic color='green' onClick={handleSubmit(800000)}>Price: $8000</Button>
               </Link>
             </Card.Content>
           </Card>

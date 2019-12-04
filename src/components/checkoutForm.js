@@ -24,7 +24,7 @@ class CheckoutForm extends Component {
       mode: "cors",
       method: "POST",
       headers: { "Content-Type": "text/plain" },
-      body: JSON.stringify({amount: 100000, description: "Filler description", source: token.id})
+      body: JSON.stringify({amount: this.props.amount, description: this.props.description, source: token.id})
     });
 
     if (response.ok) console.log("Purchase Complete!")

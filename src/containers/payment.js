@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 
-import { Link } from "react-router-dom";
 import { Elements, StripeProvider } from 'react-stripe-elements';
 
 import CheckoutForm from '../components/checkoutForm';
@@ -41,6 +40,11 @@ const steps = [
 const PaymentSteps = () => <Step.Group items={steps} />
 
 function Payment() {
+  const {
+    amount,
+    description
+  } = globalState.paymentPlan;
+
   return (
     <Segment placeholder>
       <PaymentSteps />
@@ -48,7 +52,7 @@ function Payment() {
         <div className="example">
           <h1>Input Your Payment Information Below</h1>
           <Elements>
-            <CheckoutForm />
+            <CheckoutForm amount={amount} description={description} />
           </Elements>
         </div>
       </StripeProvider>
