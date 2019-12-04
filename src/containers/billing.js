@@ -50,14 +50,14 @@ function Billing({ updateGlobalState, globalState }) {
   }, []);
 
   const formDetails = {
-    firstName: globalState.firstName,
-    lastName: globalState.lastName,
-    schoolName: globalState.schoolName,
-    districtName: globalState.districtName,
-    billingAddress: globalState.billingAddress,
-    zipCode: globalState.zipCode,
-    city: globalState.city,
-    stateCode: globalState.stateCode
+    firstName: globalState.formInfo.firstName,
+    lastName: globalState.formInfo.lastName,
+    schoolName: globalState.formInfo.schoolName,
+    districtName: globalState.formInfo.districtName,
+    billingAddress: globalState.formInfo.billingAddress,
+    zipCode: globalState.formInfo.zipCode,
+    city: globalState.formInfo.city,
+    stateCode: globalState.formInfo.stateCode
   };
 
   return (
