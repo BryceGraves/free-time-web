@@ -40,14 +40,14 @@ const CheckoutSteps = () => <Step.Group items={steps} />
 
 function Storefront(updateGlobalState, globalState) {
   const handleSubmit = useCallback((cost) => {
-    globalState.paymentPlan[amount] = cost
+    globalState.paymentPlan.amount = cost
 
     if (cost === 5000) {
-      globalState.paymentPlan[description] = "Trial Subscription"
+      globalState.paymentPlan.description = "Trial Subscription"
     } else if (cost === 100000) {
-      globalState.paymentPlan[description] = "Year Subscription"
+      globalState.paymentPlan.description = "Year Subscription"
     } else if (cost === 800000) {
-      globalState.paymentPlan[description] = "Ten Year Subscription"
+      globalState.paymentPlan.description = "Ten Year Subscription"
     }
 
     updateGlobalState(globalState);
