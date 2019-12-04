@@ -42,6 +42,8 @@ function Storefront(updateGlobalState, globalState) {
   const handleSubmit = useCallback((cost) => {
     globalState.paymentPlan.amount = cost
 
+    console.log(cost);
+
     if (cost === 5000) {
       globalState.paymentPlan.description = "Trial Subscription"
     } else if (cost === 100000) {
