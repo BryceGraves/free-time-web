@@ -7,6 +7,7 @@ import {
   Form,
   Grid,
   Header,
+  Icon,
   Segment,
   Step,
 } from 'semantic-ui-react'
@@ -59,8 +60,20 @@ function Confirmation({ globalState }) {
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em', marginTop: '2rem' }}>
-                Your order has been placed
+                Your order has been placed:
             </Header>
+            <p style={{ fontSize: '1.3em' }}>
+              Thank you for purchasing our product! A custom url has been generated for you.
+            </p>
+            <p style={{ fontSize: '1.3em' }}>
+              The button below will redirect you to your school's scheduling software where you will be prompted to log in and complete the setup.
+            </p>
+            <a href="https://falcontime.herokuapp.com/users/sign_in">
+              <Button size='huge'>
+                Setup
+                <Icon name="arrow alternate circle right outline" />
+              </Button>
+            </a>
           </Grid.Column>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em', marginTop: '2rem' }}>
@@ -123,9 +136,6 @@ function Confirmation({ globalState }) {
           </Grid.Column>
         </Grid.Row>
       </Grid>
-      <Link to="/">
-        <Button size='huge'>I'm Done Here</Button>
-      </Link>
     </Segment>
   )
 }

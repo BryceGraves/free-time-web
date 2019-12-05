@@ -46,8 +46,6 @@ function Storefront({updateGlobalState, globalState}) {
       globalState.paymentPlan.description = "Trial Subscription"
     } else if (cost === 100000) {
       globalState.paymentPlan.description = "Year Subscription"
-    } else if (cost === 800000) {
-      globalState.paymentPlan.description = "Ten Year Subscription"
     }
 
     updateGlobalState(globalState);
@@ -60,7 +58,7 @@ function Storefront({updateGlobalState, globalState}) {
         <Card.Group centered>
           <Card>
             <Card.Content>
-              <Card.Header>Purchase Trial</Card.Header>
+              <Card.Header textAlign="center">Trial</Card.Header>
               <Card.Meta>Non-Recurring</Card.Meta>
               <Card.Description>
                 Month long trial of the scheduling software
@@ -74,7 +72,7 @@ function Storefront({updateGlobalState, globalState}) {
           </Card>
           <Card>
             <Card.Content>
-              <Card.Header>Purchase Yearly Subscription</Card.Header>
+              <Card.Header textAlign="center">Yearly Subscription</Card.Header>
               <Card.Meta>Recurring Annually</Card.Meta>
               <Card.Description>
                 Year long subscription
@@ -83,20 +81,6 @@ function Storefront({updateGlobalState, globalState}) {
             <Card.Content extra>
               <Link to="/billing">
                 <Button basic color='green' onClick={() => handleSubmit(100000)}>Price: $1000</Button>
-              </Link>
-            </Card.Content>
-          </Card>
-          <Card>
-            <Card.Content>
-              <Card.Header>Purchase Decade Subscription</Card.Header>
-              <Card.Meta>Recurring Decennially</Card.Meta>
-              <Card.Description>
-                Decade long subscription at a reduced cost
-              </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-              <Link to="/billing">
-                <Button basic color='green' onClick={() => handleSubmit(800000)}>Price: $8000</Button>
               </Link>
             </Card.Content>
           </Card>

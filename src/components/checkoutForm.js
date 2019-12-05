@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 
 import {CardElement, injectStripe} from 'react-stripe-elements';
 import { Link } from "react-router-dom";
-import { Button } from 'semantic-ui-react'
+import {
+  Button,
+  Container,
+  Divider,
+} from 'semantic-ui-react'
 
 class CheckoutForm extends Component {
   constructor(props) {
@@ -35,16 +39,19 @@ class CheckoutForm extends Component {
     if (this.state.complete) {
       return (
         <Link to="/confirmation">
-          <Button size='huge'>View Confirmation</Button>
+          <Button color="green" size='huge'>View Confirmation</Button>
         </Link>
       );
     }
 
     return (
       <div className="checkout">
-        <p>Would you like to complete the purchase?</p>
-        <CardElement />
-        <Button onClick={this.submit} size='medium'>Pay</Button>
+        <Divider />
+        <Container>
+          <CardElement />
+        </Container>
+        <Divider />
+        <Button color="blue" onClick={this.submit} size='medium'>Pay</Button>
       </div>
     );
   }

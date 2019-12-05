@@ -137,7 +137,7 @@ function Billing({ updateGlobalState, globalState }) {
                 Billing Information
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              We need a little information about you to complete your order.
+              We need a some information about you to complete your order.
             </p>
           </Grid.Column>
         </Grid.Row>
