@@ -39,7 +39,7 @@ const steps = [
 
 const PaymentSteps = () => <Step.Group items={steps} />
 
-function Payment(globalState) {
+function Payment({globalState}) {
   return (
     <Segment placeholder>
       <PaymentSteps />

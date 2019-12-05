@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -38,11 +38,9 @@ const steps = [
 
 const CheckoutSteps = () => <Step.Group items={steps} />
 
-function Storefront(updateGlobalState, globalState) {
+function Storefront({updateGlobalState, globalState}) {
   const handleSubmit = useCallback((cost) => {
     globalState.paymentPlan.amount = cost
-
-    console.log(cost);
 
     if (cost === 5000) {
       globalState.paymentPlan.description = "Trial Subscription"
@@ -70,7 +68,7 @@ function Storefront(updateGlobalState, globalState) {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green' onClick={handleSubmit, 5000}>Price: $50</Button>
+                <Button basic color='green' onClick={() => handleSubmit(5000)}>Price: $50</Button>
               </Link>
             </Card.Content>
           </Card>
@@ -84,7 +82,7 @@ function Storefront(updateGlobalState, globalState) {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green' onClick={handleSubmit, 100000}>Price: $1000</Button>
+                <Button basic color='green' onClick={() => handleSubmit(100000)}>Price: $1000</Button>
               </Link>
             </Card.Content>
           </Card>
@@ -98,7 +96,7 @@ function Storefront(updateGlobalState, globalState) {
             </Card.Content>
             <Card.Content extra>
               <Link to="/billing">
-                <Button basic color='green' onClick={handleSubmit, 800000}>Price: $8000</Button>
+                <Button basic color='green' onClick={() => handleSubmit(800000)}>Price: $8000</Button>
               </Link>
             </Card.Content>
           </Card>

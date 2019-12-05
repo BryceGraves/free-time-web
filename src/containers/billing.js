@@ -60,8 +60,6 @@ function Billing({ updateGlobalState, globalState }) {
     stateCode
   } = globalState.formInfo;
 
-  console.log(globalState)
-
   return (
     <Segment placeholder>
       <BillingSteps />
