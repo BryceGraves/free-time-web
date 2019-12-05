@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b3d0d740fecc086416af021b5cf030f",
+    "revision": "3aec40ca63fd276988a51a5b9a332e3a",
     "url": "/free-time-web/index.html"
   },
   {
-    "revision": "59a7e77bea652ee7066c",
+    "revision": "5162789e976f4963f0a1",
     "url": "/free-time-web/static/css/2.844005b8.chunk.css"
   },
   {
-    "revision": "59a7e77bea652ee7066c",
-    "url": "/free-time-web/static/js/2.7267460a.chunk.js"
+    "revision": "5162789e976f4963f0a1",
+    "url": "/free-time-web/static/js/2.e1137ee2.chunk.js"
   },
   {
-    "revision": "0402ffcc48d1b6f97702",
-    "url": "/free-time-web/static/js/main.265a8b8e.chunk.js"
+    "revision": "99c455e8268e4444def4",
+    "url": "/free-time-web/static/js/main.8d815ba1.chunk.js"
   },
   {
     "revision": "57094f56f78842926876",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
     "url": "/free-time-web/static/media/brand-icons.e8c322de.woff2"
+  },
+  {
+    "revision": "add0de09802e082558fbb950ece34b6d",
+    "url": "/free-time-web/static/media/brian.add0de09.jpg"
   },
   {
     "revision": "9c74e172f87984c48ddf5c8108cabe67",
