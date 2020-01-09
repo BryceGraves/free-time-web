@@ -7,7 +7,6 @@ import {
   Container,
   Grid,
   Header,
-  Icon,
   Image,
   Segment,
 } from 'semantic-ui-react'
